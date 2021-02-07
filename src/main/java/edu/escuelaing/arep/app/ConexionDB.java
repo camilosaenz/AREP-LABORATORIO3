@@ -10,8 +10,7 @@ import java.util.ArrayList;
  */
 public class ConexionDB {
 	
-	private static String uri = "postgres://cfrrzvighilred:6e049102c73d24f83e047feb5abfc96dd73742a2356e97383c795a2bf7fcc574@ec2-3-214-3-162.compute-1.amazonaws.com:5432/dc4sebsf2fbtrc\r\n"
-			+ "";
+	private static String uri = "jdbc:postgresql://ec2-3-214-3-162.compute-1.amazonaws.com:5432/dc4sebsf2fbtrc?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
 	private static String user = "cfrrzvighilred";
 	private static String password = "6e049102c73d24f83e047feb5abfc96dd73742a2356e97383c795a2bf7fcc574";
 	private static Connection conexion = null;

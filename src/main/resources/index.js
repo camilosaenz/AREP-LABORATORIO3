@@ -1,1 +1,1 @@
-alert("Bienvenido, en esta pagina encontrara infromacion acerca de la UEFA CHAMPIONS LEAGUE");
+alert("Bienvenido, en esta pagina encontrara informacion acerca de la UEFA CHAMPIONS LEAGUE");
