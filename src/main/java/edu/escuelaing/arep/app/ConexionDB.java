@@ -55,7 +55,7 @@ public class ConexionDB {
 	public ArrayList<String[]> getPartido(){
 		
 		ArrayList<String[]> lista = new ArrayList<>();
-		String select = "SELECT * FROM partidos";
+		String select = "SELECT * FROM partidos;";
 		try {
 			Statement  statement = conexion.createStatement();
 			ResultSet resultSet = statement.executeQuery(select);

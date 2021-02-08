@@ -97,7 +97,7 @@ public class ServidorHTTP {
 			file = "";
 			ArrayList<String[]> partido = conexion.getPartido();
 			for(String[] p : partido) {
-				file = file + " Partido UEFA - " + p[0] + " VS " + p[1] + "Estadio: " + p[2] + "Fecha: " + p[3] + "\n";
+				file = file + " Partido UEFA - " + p[0] + " VS " + p[1] + " - Estadio: " + p[2] + " - Fecha: " + p[3] + "\n";
 			}
 			return line + file;
 			
