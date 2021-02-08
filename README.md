@@ -53,8 +53,16 @@ Para desplegar el programa en Heroku, se debe realizar clic en el siguiente bot√
 Esta aplicaci√≥n cuenta con todas las restriciones de CircleCI.
 
  [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/camilosaenz/AREP-LABORATORIO3)
+
+## CREDENCIALES
+
+* Host: ec2-3-214-3-162.compute-1.amazonaws.com
+* Database: dc4sebsf2fbtrc
+* User: cfrrzvighilred
+* Port: 5432
+* Password: 6e049102c73d24f83e047feb5abfc96dd73742a2356e97383c795a2bf7fcc574
  
- ## DESARROLO
+## DESARROLO
 
 Este laboratorio fue construido con las siguiente herramientas:
 * [Maven](https://maven.apache.org/)
@@ -65,7 +73,7 @@ Este laboratorio fue construido con las siguiente herramientas:
 * [CircleCI](https://circleci.com/)
 * [DBeaver](https://dbeaver.io/)
  
- ## LICENCIA
+## LICENCIA
 
 [Licencia **GNU General Public License v3.0**](https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/LICENSE)
 
