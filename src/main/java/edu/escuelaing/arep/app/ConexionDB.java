@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 /**
- * 
+ * Esta clase permite realizar la conexion a la base de datos creada por medio de Heroku, utilizamos las credenciales dadas y por medio de esta llamamos las tablas a mostrar.
  * @author Camilo
  *
  */
@@ -16,7 +16,7 @@ public class ConexionDB {
 	private static Connection conexion = null;
 	
 	/**
-	 * 
+	 * Constructor de la Clase.
 	 */
 	public ConexionDB() {
 		try {
@@ -30,7 +30,7 @@ public class ConexionDB {
 	}
 	
 	/**
-	 * 
+	 * Permite crear la tabla partidos.
 	 */
 	public void createTable() {
 		
@@ -49,7 +49,7 @@ public class ConexionDB {
 	}
 	
 	/**
-	 * 
+	 * Permite obtener la informacion de la tabla.
 	 * @return
 	 */
 	public ArrayList<String[]> getPartido(){

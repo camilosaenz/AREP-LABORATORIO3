@@ -15,12 +15,21 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
+/**
+ * Esta clase permite hacer el proceso para poder montar los servidores web y utilizar para poder abrir los diferentes recursos de la pagina.
+ * @author Camilo
+ *
+ */
 public class ServidorHTTP {
 	
 	private String ruta = "src/main/resources";
 	private PrintWriter out = null;
 	private ConexionDB conexion = null;
 	
+	/**
+	 * Este metodo inicia obteniendo el puerto de arranque
+	 * @throws IOException
+	 */
 	public void start() throws IOException {
 		
 		int port = getPort();
@@ -54,7 +63,10 @@ public class ServidorHTTP {
 		}
 	}
 	
-	
+	/**
+	 * Ayuda implementado y retornando el puerto de funcion.
+	 * @return retorna el puerto.
+	 */
 	private int getPort() {
 		if(System.getenv("PORT") != null) {
 			return Integer.parseInt(System.getenv("PORT"));
@@ -62,7 +74,11 @@ public class ServidorHTTP {
 		return 35000;
 	}
 
-
+	/**
+	 * Permite que se realice el proceso para abrir /index.html
+	 * @param clientSocket cliente.
+	 * @throws IOException
+	 */
 	private void processRequest(Socket clientSocket) throws IOException {
 		out = new PrintWriter(clientSocket.getOutputStream(), true);
 		BufferedReader buffer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -88,6 +104,11 @@ public class ServidorHTTP {
 		buffer.close();
 	}
 	
+	/**
+	 * Este metodo permite obtener los datos de la base de datos, en un recurso /Apps/partidos
+	 * @param app String con la pagina a abrir
+	 * @return
+	 */
 	private String invoke(String app) {
 		
 		String line = getHeader("html");
@@ -97,7 +118,7 @@ public class ServidorHTTP {
 			file = "";
 			ArrayList<String[]> partidos = conexion.getPartido();
 			for(String[] partido : partidos) {
-				file = file + " Partido UEFA - " + partido[0] + " VS " + partido[1] + " - Estadio: " + partido[2] + " - Fecha: " + partido[3] + "\n";
+				file = file + " Partido UEFA - " + partido[0] + " VS " + partido[1] + " - Estadio: " + partido[2] + " - Fecha: " + partido[3]+"\n";
 			}
 			return line + file;
 			
@@ -119,8 +140,12 @@ public class ServidorHTTP {
         return line;
 	}
 
-
-
+	/**
+	 * Este metodo permite obtener el recurso dado.
+	 * @param file archivo String
+	 * @param clientSocket
+	 * @throws IOException
+	 */
 	private void getResourse(String file, Socket clientSocket) throws IOException {
 		
 		String line;
@@ -135,7 +160,12 @@ public class ServidorHTTP {
 			getImage(file, clientSocket.getOutputStream());
 		}
 	}
-
+	
+	/**
+	 * Este motodo permite obtener el tipo de recurso
+	 * @param tipo String del tipo de recurso
+	 * @return el recurso
+	 */
 	private int getType(String tipo) {
 		if(tipo.contains("html")) {
 			return 0;
@@ -146,7 +176,12 @@ public class ServidorHTTP {
 		}
 		
 	}
-
+	
+	/**
+	 * Permite obtener una imagen en una pagina.
+	 * @param tipo String con la imagen a abrir
+	 * @param outClient cliente
+	 */
 	private void getImage(String tipo, OutputStream outClient) {
 		
 		String path = ruta + tipo;
@@ -167,7 +202,12 @@ public class ServidorHTTP {
 		}
 		
 	}
-	
+	/**
+	 * Este metodo permite a obtener un String a abrir
+	 * @param route ruta que contiene los archivos
+	 * @param tipo String para generar pagina
+	 * @return
+	 */
 	private String getFile(String route, String tipo) {
 		
 		String line = getHeader(tipo);
