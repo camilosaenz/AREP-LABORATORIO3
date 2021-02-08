@@ -93,11 +93,11 @@ public class ServidorHTTP {
 		String line = getHeader("html");
 		String file = MySpark.get(app);
 		
-		if(app.equals("/partido")) {
+		if(app.equals("/partidos")) {
 			file = "";
-			ArrayList<String[]> partido = conexion.getPartido();
-			for(String[] p : partido) {
-				file = file + " Partido UEFA - " + p[0] + " VS " + p[1] + " - Estadio: " + p[2] + " - Fecha: " + p[3] + "\n";
+			ArrayList<String[]> partidos = conexion.getPartido();
+			for(String[] partido : partidos) {
+				file = file + " Partido UEFA - " + partido[0] + " VS " + partido[1] + " - Estadio: " + partido[2] + " - Fecha: " + partido[3] + "/n";
 			}
 			return line + file;
 			
