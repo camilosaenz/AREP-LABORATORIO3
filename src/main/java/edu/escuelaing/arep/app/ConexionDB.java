@@ -34,7 +34,7 @@ public class ConexionDB {
 	 */
 	public void createTable() {
 		
-		String CREATE_TABLE="CREATE TABLE Equipo ("
+		String CREATE_TABLE="CREATE TABLE partidos ("
 				+ "LOCAL VARCHAR(20) NOT NULL,"
 				+ "VISITANTE VARCHAR(20) NOT NULL,"
 				+ "ESTADIO VARCHAR(20) NOT NULL,"
@@ -55,7 +55,7 @@ public class ConexionDB {
 	public ArrayList<String[]> getPartido(){
 		
 		ArrayList<String[]> lista = new ArrayList<>();
-		String select = "SELECT * FROM Equipo";
+		String select = "SELECT * FROM partidos";
 		try {
 			Statement  statement = conexion.createStatement();
 			ResultSet resultSet = statement.executeQuery(select);
