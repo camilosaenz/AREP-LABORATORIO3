@@ -15,7 +15,7 @@ public class MySpark {
 	/**
 	 * Este metodo ayuda a la implementacion de Spark
 	 * @param app String con un html.
-	 * @return retorna 
+	 * @return retorna un String con el contenido del valor
 	 */
 	public static String get(String app) {
 		if(fin.containsKey(app)) {
@@ -26,8 +26,8 @@ public class MySpark {
 
 	/**
 	 * Implementa un Post de Spark.
-	 * @param llave 
-	 * @param valor
+	 * @param llave contiene llave
+	 * @param valor contiene valor de la llave
 	 */
 	public static void post(String llave, String valor) {
 		fin.put(llave, valor);

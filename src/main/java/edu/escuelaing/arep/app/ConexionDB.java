@@ -50,7 +50,7 @@ public class ConexionDB {
 	
 	/**
 	 * Permite obtener la informacion de la tabla.
-	 * @return
+	 * @return retorna un arreglo con los datos que contiene la base de datos.
 	 */
 	public ArrayList<String[]> getPartido(){
 		
