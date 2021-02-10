@@ -37,16 +37,28 @@ Para poder generar la Documentación del laboratorio es necesario escribir el si
 mvn javadoc:javadoc
 ```
 
-## DHEROKU
+## HEROKU
 Para desplegar el programa en Heroku, se debe realizar clic en el siguiente botón de Heroku para desplegar automáticamente la aplicación directamente desde Heroku. 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://uefachampionsleague-arep-rcsr.herokuapp.com/)
 
-* Interfaz prinsipal [/index.html](https://uefachampionsleague-arep-rcsr.herokuapp.com/index.html)
+* Interfaz prinsipal [/index.html](https://uefachampionsleague-arep-rcsr.herokuapp.com/index.html) - "Ademas esta trae la funcion de JavaScript"
+
+<img src="https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/img/js.PNG?raw=true">
+
+<img src="https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/img/indexhtml.PNG?raw=true">
+
 * Un About sobre la pagina en [/Apps/about](https://uefachampionsleague-arep-rcsr.herokuapp.com/Apps/about)
+
+<img src="https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/img/about.PNG?raw=true">
+
 * El logo de la UEFA Champions League en [/UEFA-CHAMPIONS-LEAGUE.png](https://uefachampionsleague-arep-rcsr.herokuapp.com/UEFA-CHAMPIONS-LEAGUE.png)
+
+<img src="https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/img/png.PNG?raw=true">
+
 * Base de Datos con la información de los partidos de IDA de los octavos de final de la UEFA Champions League [/Apps/partidos](https://uefachampionsleague-arep-rcsr.herokuapp.com/Apps/partidos)
 
+<img src="https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/img/DB.PNG?raw=true">
 
 ## CIRCLECI
 
@@ -72,6 +84,10 @@ Este laboratorio fue construido con las siguiente herramientas:
 * [Heroku](https://www.heroku.com/)
 * [CircleCI](https://circleci.com/)
 * [DBeaver](https://dbeaver.io/)
+ 
+## LATEX
+
+Este proyecto cuenta con un [archivo](https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/AREP%20-%20LABORATORIO3.pdf) realizado completamente utilizando LaTeX por medio de la aplicacion [Overleaf](https://www.overleaf.com/project) y ademas cuenta con el [Proyecto.zip](https://github.com/camilosaenz/AREP-LABORATORIO3/blob/master/AREP%20-%20LABORATORIO3.zip) que contiene un archivo.tex que al abrir por cualquier compilador de LaTeX permite ver el documento .pdf realizado. 
  
 ## LICENCIA
 
